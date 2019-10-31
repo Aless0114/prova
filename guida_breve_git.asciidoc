@@ -1,0 +1,99 @@
+= Comandi Git
+
+=== Percorso
+-----
+export PS1="\W$"
+-----
+
+- Scrive il tuo percorso corrente prima di $
+
+=== Descrizione di chi sei:
+-----
+git config --global user.name "NomeCognome"
+-----
+
+- Imposti il tuo Username
+
+-----
+git config --global user.email email_personale
+-----
+
+- Imposti il tuo indirizzo email
+
+=== Come impostare il proxy:
+-----
+git config --global http.proxy http://10.1.1.254:3128
+git config --global https.proxy http://10.1.1.254:3128
+-----
+
+=== Clonare un archivio remoto
+-----
+git clone https://github.com/SoftwareIISGubbio/formaggio.git
+-----
+
+. "clone" Copia un archivio remoto
+. "https://github.com/SoftwareIISGubbio/formaggio.git" Indirizzo remoto
+
+=== Controllare lo stato del repository
+-----
+git status
+-----
+- Dice quali azioni possono essere compiute e quelle effettuate, si deve essere all'interno della cartella di git
+
+=== Aggiungere modifiche al commit
+-----
+git add nome_file nome_file
+-----
+. "add" Aggiunta dei file al prossimo commit
+. "nome_file" I file da aggiungere
+
+=== Descrizione del commit da effettuare
+-----
+git commit -m"Descrizione modifiche"
+-----
+. "commit" registra i cambiamenti (localmente)
+. "-m" messaggio da registrare sul commit
+. "Descrizione modifiche" Il messaggio da registrare deve descrivere cosa è stato fatto (Importante!)
+
+=== Effettuare il commit
+-----
+git push
+-----
+- Invia i commit locali al server remoto
+
+=== Recupero dei dati non integratu
+-----
+git fetch
+-----
+- Recupera i dati dal server remoto (ma non sul progetto personale)
+
+=== Recupero dei dati integrati
+-----
+git pull
+-----
+- Recupera i dati dal server remoto (Integra i dati nel mio progetto)
+
+=== Confronto dei file
+-----
+git diff
+-----
+-Confronta i file arruali con quelli presenti nell'ultimo commit
+
+=== Interfaccia
+-----
+git gui
+-----
+- Per far vedere l'interfaccia grafica
+
+=== Impostazioni generali
+-----
+git config --list
+-----
+- Mostra a schermo le impostazioni globali di git
+
+=== Ripristino dei file
+-----
+git restore nome_file
+-----
+- Ripristina la modifica del file
+
